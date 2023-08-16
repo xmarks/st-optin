@@ -1,0 +1,60 @@
+/**
+ * Typography Styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
+
+
+// Typography Variables
+:root {
+  // Menu
+  --fs-menu-item: 16px;
+  --fs-menu-item-small: 14px;
+  --fs-menu-item-big: 20px;
+
+  // Hero
+  --fs-hero-title: 64px;
+  --fs-hero-content: 24px;
+
+  --fs-hero-form-text: 13px;
+
+  // Contact 7
+  --fs-form-control: 18px;
+
+  // Item Filter
+  --fs-item-filter-heading: 64px;
+  --fs-item-filter-text: 20px;
+
+  // Buttons
+  --fs-btn: 20px;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+// Superscript src: https://stackoverflow.com/a/1704005
+.sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+
+@media(max-width: 767px) {
+  :root {
+    // Hero
+    --fs-hero-title: calc(64px * 0.8);
+
+    // Item Filter
+    --fs-item-filter-heading: calc(64px * 0.8);
+  }
+}
+
+@media(max-width: 575px) {
+  :root {
+    // Hero
+    --fs-hero-title: calc(64px * 0.65);
+
+    // Item Filter
+    --fs-item-filter-heading: calc(64px * 0.65);
+  }
+}

@@ -1,0 +1,229 @@
+/**
+ * HERO Styles
+ */
+
+#st-hero {
+  --mask-gradient-width: 55.5%;
+
+  position: relative;
+  min-height: 100svh;
+
+  //min-height: calc(100svh - var(--header-height));
+  padding-top: var(--header-height);
+  margin-bottom: 74px;
+
+  .st-hero__mask-gradient,
+  .st-hero__mask-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .st-hero__mask-gradient {
+    left: 0;
+    width: var(--mask-gradient-width);
+
+    // background: linear-gradient(65deg, #EE1251 0%, #6729C1 58.51%, #1D35FD 100%);
+    @include linear-gradient-background(35deg, (#EE1251 0%, #6729C1 58.51%, #1D35FD 100%));
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:before {
+      --icon-size: 239px;
+
+      left: calc(-1 * var(--icon-size) * 0.5);
+      bottom: calc(-1 * var(--icon-size) * 0.5);
+
+      width: var(--icon-size);
+      height: var(--icon-size);
+
+      background-image: url("assets/icons/st_hero-svg_mask-icon_bottom.png");
+    }
+
+    &:after {
+      --icon-size: 137px;
+
+      top: 0;
+      right: 0;
+
+      width: var(--icon-size);
+      height: var(--icon-size);
+
+      background-image: url("assets/icons/st_hero-svg_mask-icon_top.png");
+
+
+    }
+  }
+
+  .st-hero__mask-image {
+    right: 0;
+    width: calc(100% - var(--mask-gradient-width));
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .st-hero__content {
+    color: var(--bs-white);
+
+    width: var(--mask-gradient-width);
+    padding-top: 40px;
+    padding-bottom: 37px;
+
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-weight: 700;
+      font-size: var(--fs-hero-title);
+      line-height: calc(var(--fs-hero-title) * 1.015643);
+
+      margin-bottom: 34px;
+    }
+
+    p {
+      font-size: var(--fs-hero-content);
+      line-height: normal;
+
+      margin-bottom: 35px;
+
+      a {
+        color: var(--bs-white);
+        transition: color ease .3s;
+
+        &:hover,
+        &:focus {
+          color: #FF0;
+        }
+      }
+    }
+
+    .wpcf7 {
+      max-width: 590px;
+
+      .wpcf7-form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        margin: 0 0 0 -22px;
+        padding: 30px 22px;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          display: block;
+
+          top: 0;
+          left: 0;
+          bottom: 0;
+          position: absolute;
+          z-index: -1;
+
+          opacity: 0.1;
+          border-radius: 10px;
+          @include linear-gradient-background(233deg, (rgba(255, 255, 255, 0.25) 0%, #FFF 100%));
+        }
+
+        .wpcf7-not-valid-tip {
+          color: #ff0;
+        }
+
+        .row.g-15 {
+          margin: 0 calc(-1 * (15px / 2));
+
+          .col-6,
+          .col-12 {
+            padding: 0 calc(15px / 2);
+            margin: 0 0 15px;
+          }
+
+          .col-12:last-of-type {
+            margin-bottom: 0;
+            position: relative;
+
+            .wpcf7-spinner {
+              position: absolute;
+              left: 60%;
+              top: 17px;
+            }
+          }
+        }
+
+        .wpcf7-response-output {
+          margin: 15px auto 0;
+        }
+
+        p {
+          font-size: var(--fs-hero-form-text);
+          line-height: normal;
+          font-weight: 300;
+          margin: 0;
+        }
+
+        .form-control {
+          font-weight: 500;
+          padding: var(--hero-form-control-px) var(--hero-form-control-py);
+          line-height: normal;
+          font-size: var(--fs-form-control);
+        }
+
+        .input-group {
+
+          &.input-group-select {
+
+            .wpcf7-form-control-wrap {
+
+              // Select Input
+              &:first-child {
+
+                &:after {
+                  top: calc((var(--fs-form-control) + (var(--hero-form-control-py) * 2)) / 2);
+                  right: calc(var(--hero-form-control-px) * .5);
+                }
+              }
+
+              &:last-child {
+
+                .form-control {
+                  padding-left: 78px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  #st-hero {
+    --mask-gradient-width: 70%;
+  }
+}
+
+@media(max-width: 767px) {
+  #st-hero {
+    --mask-gradient-width: 100%;
+  }
+
+  #st-hero .st-hero__content .wpcf7 .wpcf7-form {
+    margin: 0;
+  }
+}
+
+@media(max-width: 500px) {
+
+}

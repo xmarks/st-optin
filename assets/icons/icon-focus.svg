@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="focus 1" clip-path="url(#clip0_801_892)">
+<g id="Group">
+<path id="Vector" d="M19 19H5V17.687C5 16.474 5.725 15.38 6.846 14.915C7.981 14.445 9.67 14 12 14C14.33 14 16.019 14.445 17.154 14.916C18.275 15.38 19 16.474 19 17.687V19Z" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M1 5V1H5" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M23 5V1H19" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M1 19V23H5" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M23 19V23H19" stroke="#FF2E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_801_892">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

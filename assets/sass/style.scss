@@ -1,0 +1,25 @@
+/*!
+ Theme Name:   ST Optin
+ Theme URI:    https://www.snailtheme.com
+ Description:  Understrap Child Theme
+ Author:       xmarks
+ Author URI:   https://www.snailtheme.com
+ Template:     understrap
+ Version:      1.0.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  st_optin_domain
+*/
+
+
+@import "variables";
+
+@import "mixins";
+@import "typography";
+
+@import "general";
+@import "menu";
+
+// Sections
+@import "sections/hero";
+@import "sections/item-filter";

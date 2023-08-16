@@ -1,0 +1,11 @@
+/**
+ * SASS Mixins
+ */
+
+@mixin linear-gradient-background($angle, $colors) {
+  background: -webkit-linear-gradient($angle, $colors);
+  background: -moz-linear-gradient($angle, $colors);
+  background: -o-linear-gradient($angle, $colors);
+  background: -ms-linear-gradient($angle, $colors);
+  background: linear-gradient($angle, $colors);
+}

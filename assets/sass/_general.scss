@@ -1,0 +1,125 @@
+/**
+ * General Styles
+ */
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1160px;
+    max-width: calc(1160px + (var(--bs-gutter-x) * .5) * 2);
+  }
+}
+
+// Conditional Padding on pages with Hero Section
+.wrapper.has-hero {
+  // padding: var(--header-height) 0 0;
+  padding: 0;
+
+  #content.container-fluid {
+    padding: 0;
+  }
+}
+
+// Contact 7 CSS Resets
+body .wpcf7 {
+  max-width: 100%;
+  margin: 0 !important;
+
+  .input-group {
+
+    .wpcf7-form-control-wrap:first-child {
+      position: absolute;
+      z-index: 1;
+      left: -1px;
+      top: 0;
+    }
+
+    &.input-group-select {
+
+      // Select Input
+      .wpcf7-form-control-wrap:first-child {
+
+        select {
+          border-radius: 0;
+          border-color: transparent;
+          background-color: var(--form-input-group-bg);
+        }
+
+        &:after {
+          display: inline-block;
+          margin-left: .255em;
+          vertical-align: .255em;
+          content: "";
+          border-top: .3em solid;
+          border-right: .3em solid transparent;
+          border-bottom: 0;
+          border-left: .3em solid transparent;
+
+          border-top-color: var(--form-input-group-carret);
+          border-bottom-color: var(--form-input-group-carret);
+
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+// Bootstrap - Contact 7 - Style resets
+body .wpcf7 {
+
+  .form-control {
+    border-radius: 0;
+  }
+}
+
+// Buttons
+.btn {
+
+  &.btn-square {
+    position: relative;
+
+    font-size: var(--fs-btn);
+    line-height: normal;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    background-color: var(--st-color-primary);
+    border-radius: 0;
+    color: var(--bs-white);
+
+    padding: 15px 33px;
+
+    transition: background-color ease .3s;
+
+    &:after {
+      content: "";
+      background: var(--bs-white);
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      right: -5px;
+      bottom: -5px;
+
+      transition: all ease .3s;
+
+      z-index: -1;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--bs-white);
+      background-color: var(--st-color-secondary);
+
+      &:after {
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
